@@ -14,6 +14,7 @@ public class MyService {
 	}
 
 	public String message() {
+		System.out.println("test message service module");
 		return this.serviceProperties.getMessage();
 	}
 }
