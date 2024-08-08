@@ -18,11 +18,15 @@ public class DemoApplication {
 
 	private final String messageTest;
 
+	private final Integer nbInteger;
+
 	public DemoApplication(
 		MyService myService, 
-		@Value("${message.test}") String messageTest) {
+		@Value("${message.test}") String messageTest,
+		Integer nbInteger) {
 		this.myService = myService;
 		this.messageTest = messageTest;
+		this.nbInteger = nbInteger;
 	}
 
 	@GetMapping("/")

@@ -20,10 +20,14 @@ class DemoApplicationTest {
 	@Value("${message.test}")
 	private String test;
 
+	@Autowired
+	private Integer nbInteger;
+
 	@Test
 	public void contextLoads() {
 		assertThat(myService.message()).isNotNull();
-		assertThat(test).isEqualTo("\"helloworldtest\"");
+		assertThat(nbInteger).isEqualTo(2000);
+		assertThat(test).isEqualTo("\"helloworldtest2222\"");
 	}
 
 }
